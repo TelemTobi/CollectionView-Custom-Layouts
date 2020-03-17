@@ -8,10 +8,10 @@
 
 import UIKit
 
+
 class FirstController: UIViewController {
 
     var collectionView: UICollectionView!
-    var annotatedPhotos = AnnotatedPhoto.allPhotos()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class FirstController: UIViewController {
     }
 }
 
-extension FirstController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension FirstController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         annotatedPhotos.count * 2
     }

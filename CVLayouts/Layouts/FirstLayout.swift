@@ -9,6 +9,7 @@
 import UIKit
 
 class FirstLayout: UICollectionViewLayout {
+    
     var delegate: CustomLayoutDelegate?
     
     private let numberOfColumns = 3

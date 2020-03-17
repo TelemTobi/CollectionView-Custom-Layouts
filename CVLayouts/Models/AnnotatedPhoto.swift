@@ -8,6 +8,13 @@
 
 import UIKit
 
+let annotatedPhotos = AnnotatedPhoto.allPhotos()
+var shuffledPhotos: [AnnotatedPhoto] {
+    get {
+        return annotatedPhotos.shuffled()
+    }
+}
+
 class AnnotatedPhoto {
     var caption: String
     var comment: String

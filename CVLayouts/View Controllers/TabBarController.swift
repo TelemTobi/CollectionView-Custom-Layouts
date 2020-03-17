@@ -19,7 +19,6 @@ class TabBarController: UITabBarController {
     
     func setUpElements() {
         view.tintColor = .systemPink
-        tabBar.backgroundColor = .white
     }
     
     func setChildVCs() {

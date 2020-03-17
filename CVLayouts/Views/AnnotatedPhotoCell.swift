@@ -10,17 +10,17 @@ import UIKit
 
 class AnnotatedPhotoCell: UICollectionViewCell {
     
-    static let id = "FirstCell"
+    static let id = "AnnotatedPhotoCell"
     private var imageView: UIImageView!
-    private var captionLabel: UILabel!
-    private var commentLabel: UILabel!
+    private var quoteLabel: UILabel!
+    private var nameLabel: UILabel!
     
     var photo: AnnotatedPhoto? {
       didSet {
         if let photo = photo {
             imageView.image = photo.image
-            captionLabel.text = photo.caption
-            commentLabel.text = photo.comment
+            quoteLabel.text = photo.caption
+            nameLabel.text = photo.comment
         }
       }
     }
@@ -34,7 +34,7 @@ class AnnotatedPhotoCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setUpElements() {
+    private func setUpElements() {
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 6
         contentView.layer.masksToBounds = true
@@ -42,41 +42,43 @@ class AnnotatedPhotoCell: UICollectionViewCell {
         contentView.layer.borderColor = UIColor.white.cgColor
         
         setImageView()
-        setCaptionLabel()
-        setCommentLabel()
+        setQuoteLabel()
+        setNameLabel()
     }
     
-    func setImageView() {
+    private func setImageView() {
         imageView = UIImageView()
+        imageView.contentMode = .scaleToFill
         contentView.addSubview(imageView)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true    }
+        imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+    }
     
-    func setCaptionLabel() {
-        captionLabel = UILabel()
-        captionLabel.font = .systemFont(ofSize: 10, weight: .light)
-        captionLabel.numberOfLines = 0
-        contentView.addSubview(captionLabel)
+    private func setQuoteLabel() {
+        quoteLabel = UILabel()
+        quoteLabel.font = .systemFont(ofSize: 10, weight: .light)
+        quoteLabel.numberOfLines = 0
+        contentView.addSubview(quoteLabel)
         
-        captionLabel.translatesAutoresizingMaskIntoConstraints = false
-        captionLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 4).isActive = true
-        captionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4).isActive = true
-        captionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
+        quoteLabel.translatesAutoresizingMaskIntoConstraints = false
+        quoteLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 4).isActive = true
+        quoteLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4).isActive = true
+        quoteLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
         
     }
     
-    func setCommentLabel() {
-        commentLabel = UILabel()
-        commentLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        contentView.addSubview(commentLabel)
+    private func setNameLabel() {
+        nameLabel = UILabel()
+        nameLabel.font = .systemFont(ofSize: 10, weight: .bold)
+        contentView.addSubview(nameLabel)
         
-        commentLabel.translatesAutoresizingMaskIntoConstraints = false
-        commentLabel.topAnchor.constraint(equalTo: captionLabel.bottomAnchor, constant: 4).isActive = true
-        commentLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4).isActive = true
-        commentLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
-        commentLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8).isActive = true
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.topAnchor.constraint(equalTo: quoteLabel.bottomAnchor, constant: 4).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4).isActive = true
+        nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
+        nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8).isActive = true
     }
 }

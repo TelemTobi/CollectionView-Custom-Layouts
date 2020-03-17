@@ -10,10 +10,12 @@ import UIKit
 
 extension UIViewController {
     func setBackgroundImage(_ image: UIImage) {
-        let backgroundImage = UIImageView(image: image)
-        backgroundImage.alpha = 0.6
-        backgroundImage.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        view.addSubview(backgroundImage)
-        view.sendSubviewToBack(backgroundImage)
+//        let backgroundImage = UIImageView(image: image)
+//        backgroundImage.alpha = 0.4
+//        backgroundImage.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+//        view.addSubview(backgroundImage)
+//        view.sendSubviewToBack(backgroundImage)
+        
+        view.backgroundColor = .systemBlue
     }
 }
