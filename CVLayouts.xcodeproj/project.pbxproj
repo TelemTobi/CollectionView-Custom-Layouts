@@ -16,13 +16,15 @@
 		7DA23945241F8E070075428F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA23944241F8E070075428F /* Extensions.swift */; };
 		7DA23947241FB12E0075428F /* FirstLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA23946241FB12E0075428F /* FirstLayout.swift */; };
 		7DA23949241FB1820075428F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA23948241FB1820075428F /* Protocols.swift */; };
-		7DA2394B241FB3AA0075428F /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2394A241FB3AA0075428F /* DataHelper.swift */; };
 		7DA2394D242002B30075428F /* AnnotatedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2394C242002B30075428F /* AnnotatedPhotoCell.swift */; };
 		7DA239502420072C0075428F /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2394F2420072C0075428F /* Photos.xcassets */; };
 		7DA23952242007E60075428F /* AnnotatedPhotos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DA23951242007E60075428F /* AnnotatedPhotos.plist */; };
 		7DA2396C24200AA30075428F /* AnnotatedPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2396B24200AA30075428F /* AnnotatedPhoto.swift */; };
 		7DE896642420CFED0083253F /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE896632420CFED0083253F /* PhotoCell.swift */; };
 		7DE896662420D0920083253F /* SecondLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE896652420D0920083253F /* SecondLayout.swift */; };
+		7DE89668242143540083253F /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE89667242143540083253F /* ThirdController.swift */; };
+		7DE8966A242145990083253F /* ThirdLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE89669242145990083253F /* ThirdLayout.swift */; };
+		7DE8966C242145EF0083253F /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE8966B242145EF0083253F /* NumberCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,13 +39,15 @@
 		7DA23944241F8E070075428F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7DA23946241FB12E0075428F /* FirstLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLayout.swift; sourceTree = "<group>"; };
 		7DA23948241FB1820075428F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		7DA2394A241FB3AA0075428F /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		7DA2394C242002B30075428F /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
 		7DA2394F2420072C0075428F /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
 		7DA23951242007E60075428F /* AnnotatedPhotos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AnnotatedPhotos.plist; sourceTree = "<group>"; };
 		7DA2396B24200AA30075428F /* AnnotatedPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedPhoto.swift; sourceTree = "<group>"; };
 		7DE896632420CFED0083253F /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		7DE896652420D0920083253F /* SecondLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLayout.swift; sourceTree = "<group>"; };
+		7DE89667242143540083253F /* ThirdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdController.swift; sourceTree = "<group>"; };
+		7DE89669242145990083253F /* ThirdLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdLayout.swift; sourceTree = "<group>"; };
+		7DE8966B242145EF0083253F /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 			children = (
 				7DA23946241FB12E0075428F /* FirstLayout.swift */,
 				7DE896652420D0920083253F /* SecondLayout.swift */,
+				7DE89669242145990083253F /* ThirdLayout.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 				7DA2393F241F85EC0075428F /* TabBarController.swift */,
 				7DA23941241F86A50075428F /* FirstController.swift */,
 				7DA2392B241ED22B0075428F /* SecondController.swift */,
+				7DE89667242143540083253F /* ThirdController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -113,6 +119,7 @@
 			children = (
 				7DA2394C242002B30075428F /* AnnotatedPhotoCell.swift */,
 				7DE896632420CFED0083253F /* PhotoCell.swift */,
+				7DE8966B242145EF0083253F /* NumberCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,7 +137,6 @@
 			children = (
 				7DA23944241F8E070075428F /* Extensions.swift */,
 				7DA23948241FB1820075428F /* Protocols.swift */,
-				7DA2394A241FB3AA0075428F /* DataHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -217,8 +223,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA2396C24200AA30075428F /* AnnotatedPhoto.swift in Sources */,
-				7DA2394B241FB3AA0075428F /* DataHelper.swift in Sources */,
+				7DE89668242143540083253F /* ThirdController.swift in Sources */,
 				7DA2392C241ED22B0075428F /* SecondController.swift in Sources */,
+				7DE8966C242145EF0083253F /* NumberCell.swift in Sources */,
+				7DE8966A242145990083253F /* ThirdLayout.swift in Sources */,
 				7DA23947241FB12E0075428F /* FirstLayout.swift in Sources */,
 				7DE896642420CFED0083253F /* PhotoCell.swift in Sources */,
 				7DA23940241F85EC0075428F /* TabBarController.swift in Sources */,

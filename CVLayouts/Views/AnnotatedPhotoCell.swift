@@ -67,6 +67,8 @@ class AnnotatedPhotoCell: UICollectionViewCell {
         quoteLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 4).isActive = true
         quoteLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4).isActive = true
         quoteLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
+//        quoteLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 15).isActive = true
+        quoteLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 15).isActive = true
         
     }
     
@@ -80,5 +82,6 @@ class AnnotatedPhotoCell: UICollectionViewCell {
         nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4).isActive = true
         nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
         nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8).isActive = true
+        nameLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 10).isActive = true
     }
 }

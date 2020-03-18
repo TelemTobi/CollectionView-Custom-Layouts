@@ -13,6 +13,10 @@ class SecondController: UIViewController {
     var collectionView: UICollectionView!
     var dataSource = [shuffledPhotos, shuffledPhotos, shuffledPhotos]
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,22 +31,12 @@ class SecondController: UIViewController {
 
     func setCollectionView() {
         let layout = SecondLayout.shared.create()
+        collectionView = prepareCollectionView(layout: layout)
         
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.id)
-        view.addSubview(collectionView)
-        
-        collectionView.backgroundColor = .none
-        collectionView.isScrollEnabled = true
-        
+        collectionView.register(AnnotatedPhotoCell.self, forCellWithReuseIdentifier: AnnotatedPhotoCell.id)
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
 }
 
@@ -56,9 +50,16 @@ extension SecondController: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.id, for: indexPath) as! PhotoCell
-        cell.photo = dataSource[indexPath.section][indexPath.item].image
-        return cell
+        if indexPath.section % 2 == 1 && (indexPath.item + 1) % 3 == 0 || indexPath.section % 2 == 0 && indexPath.item % 3 == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AnnotatedPhotoCell.id, for: indexPath) as! AnnotatedPhotoCell
+            cell.photo = dataSource[indexPath.section][indexPath.item]
+            return cell
+        }
+        else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.id, for: indexPath) as! PhotoCell
+            cell.photo = dataSource[indexPath.section][indexPath.item].image
+            return cell
+        }
     }
     
     

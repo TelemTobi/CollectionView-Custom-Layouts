@@ -9,7 +9,11 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +32,9 @@ class TabBarController: UITabBarController {
         let secondVC = SecondController()
         secondVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "2.square"), selectedImage: UIImage(systemName: "2.square.fill"))
         
-        self.viewControllers = [firstVC, secondVC]
+        let thirdVC = ThirdConreoller()
+        thirdVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "3.square"), selectedImage: UIImage(systemName: "3.square.fill"))
+        
+        self.viewControllers = [firstVC, secondVC, thirdVC]
     }
 }
