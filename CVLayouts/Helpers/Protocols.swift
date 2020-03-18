@@ -11,12 +11,3 @@ import UIKit
 protocol CustomLayoutDelegate {
     func collectionView(collectionView: UICollectionView, heightForItemAt indexPath: IndexPath) -> CGFloat
 }
-
-extension CustomLayoutDelegate {
-    
-    func theNumberOfItemsInCollectionView() -> Int {
-        return 0
-    }
-    
-
-}

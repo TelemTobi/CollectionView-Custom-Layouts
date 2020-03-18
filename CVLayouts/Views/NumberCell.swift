@@ -23,7 +23,7 @@ class NumberCell: UICollectionViewCell {
     }
     
     private func setUpElements() {
-        contentView.backgroundColor = .random()
+        contentView.backgroundColor = .randomThemeColor()
         contentView.layer.cornerRadius = frame.height / 2
         contentView.layer.masksToBounds = true
         contentView.layer.borderWidth = 2

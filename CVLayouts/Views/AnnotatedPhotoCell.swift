@@ -11,6 +11,7 @@ import UIKit
 class AnnotatedPhotoCell: UICollectionViewCell {
     
     static let id = "AnnotatedPhotoCell"
+    
     private var imageView: UIImageView!
     private var quoteLabel: UILabel!
     private var nameLabel: UILabel!
@@ -67,7 +68,6 @@ class AnnotatedPhotoCell: UICollectionViewCell {
         quoteLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 4).isActive = true
         quoteLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4).isActive = true
         quoteLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4).isActive = true
-//        quoteLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 15).isActive = true
         quoteLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 15).isActive = true
         
     }

@@ -8,6 +8,13 @@
 
 import UIKit
 
+
+extension UIView {
+    func round(radius: CGFloat? = nil) {
+        layer.cornerRadius = radius ?? frame.height / 2
+        layer.masksToBounds = true
+    }
+}
 extension UIViewController {
     func setBackgroundImage(_ image: UIImage) {
         let backgroundImage = UIImageView(image: image)
@@ -15,12 +22,9 @@ extension UIViewController {
         backgroundImage.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         view.addSubview(backgroundImage)
         view.sendSubviewToBack(backgroundImage)
-        
-//        view.backgroundColor = .systemBlue
     }
     
     func prepareCollectionView(layout: UICollectionViewLayout) -> UICollectionView {
-        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.addSubview(collectionView)
         
@@ -44,5 +48,10 @@ extension UIColor {
                        blue: CGFloat = CGFloat.random(in: 0...1), // from 0.5 to 1.0 to stay away from black
                        alpha: CGFloat = 1) -> UIColor {
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
+    static func randomThemeColor() -> UIColor {
+        let themeColors: [UIColor] = [.systemBlue, .systemPink]
+        return themeColors.randomElement()!
     }
 }

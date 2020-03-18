@@ -55,8 +55,8 @@ class ThirdLayout: UICollectionViewLayout {
             let height = cellPadding * 2 + cellHeight
             yOffset[column] = yOffset[column] + 2 * (height - cellPadding)
                 
-            let numberOfItems = delegate?.theNumberOfItemsInCollectionView()
-            if let numberOfItems = numberOfItems, indexPath.item == numberOfItems - 1 {
+            let numberOfItems = collectionView.numberOfItems(inSection: 0)
+            if indexPath.item == numberOfItems - 1 {
                 switch column {
                      case 0:
                        column = 2

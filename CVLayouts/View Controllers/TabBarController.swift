@@ -26,6 +26,7 @@ class TabBarController: UITabBarController {
     }
     
     func setChildVCs() {
+        
         let firstVC = FirstController()
         firstVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "1.square"), selectedImage: UIImage(systemName: "1.square.fill"))
         
@@ -35,6 +36,9 @@ class TabBarController: UITabBarController {
         let thirdVC = ThirdConreoller()
         thirdVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "3.square"), selectedImage: UIImage(systemName: "3.square.fill"))
         
-        self.viewControllers = [firstVC, secondVC, thirdVC]
+        let fouthVC = FourthController()
+        fouthVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "4.square"), selectedImage: UIImage(systemName: "4.square.fill"))
+        
+        self.viewControllers = [firstVC, secondVC, thirdVC, fouthVC]
     }
 }

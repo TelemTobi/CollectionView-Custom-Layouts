@@ -61,7 +61,5 @@ extension SecondController: UICollectionViewDelegate, UICollectionViewDataSource
             return cell
         }
     }
-    
-    
 }
 
