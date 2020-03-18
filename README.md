@@ -1,4 +1,6 @@
-<h1 align="center">Custom UICollectionView layouts</h1>
+<h1 align="center">CollectionView Custom Layouts</h1>
+<h3 align="center">and Compositional Layouts</h3>
+<p align="center">no storyboards. 100% programmatically.</p>
 
 <p align="center">
   <img src="/GIFs/gif1.gif" alt="custom layout gif">
