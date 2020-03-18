@@ -9,6 +9,7 @@
 import UIKit
 
 let annotatedPhotos = AnnotatedPhoto.allPhotos()
+let albumCovers = AnnotatedPhoto.albumCovers()
 var shuffledPhotos: [AnnotatedPhoto] {
     get {
         return annotatedPhotos.shuffled()
@@ -52,5 +53,13 @@ class AnnotatedPhoto {
         }
       }
       return photos
+    }
+    
+    static func albumCovers() -> [UIImage] {
+        var array: [UIImage] = []
+        for index in 1...20 {
+            array.append(UIImage(named: index.description)!)
+        }
+        return array
     }
 }

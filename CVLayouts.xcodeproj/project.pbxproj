@@ -27,7 +27,6 @@
 		7DE8966C242145EF0083253F /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE8966B242145EF0083253F /* NumberCell.swift */; };
 		7DE8966E2422868B0083253F /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE8966D2422868B0083253F /* FirstController.swift */; };
 		7DE89670242287D00083253F /* FirstLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE8966F242287D00083253F /* FirstLayout.swift */; };
-		7DE8967224228C270083253F /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE8967124228C270083253F /* AlbumCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +52,6 @@
 		7DE8966B242145EF0083253F /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
 		7DE8966D2422868B0083253F /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
 		7DE8966F242287D00083253F /* FirstLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLayout.swift; sourceTree = "<group>"; };
-		7DE8967124228C270083253F /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +123,6 @@
 		7DA2393D241F85900075428F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7DE8967124228C270083253F /* AlbumCell.swift */,
 				7DA2394C242002B30075428F /* AnnotatedPhotoCell.swift */,
 				7DE896632420CFED0083253F /* PhotoCell.swift */,
 				7DE8966B242145EF0083253F /* NumberCell.swift */,
@@ -248,7 +245,6 @@
 				7DA23945241F8E070075428F /* Extensions.swift in Sources */,
 				7DA2392A241ED22B0075428F /* SceneDelegate.swift in Sources */,
 				7DA23949241FB1820075428F /* Protocols.swift in Sources */,
-				7DE8967224228C270083253F /* AlbumCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

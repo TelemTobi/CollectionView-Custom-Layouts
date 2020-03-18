@@ -80,7 +80,7 @@
 		<key>Comment</key>
 		<string>Shakespeare</string>
 		<key>Photo</key>
-		<string>10</string>
+		<string>010</string>
 	</dict>
 	<dict>
 		<key>Caption</key>
@@ -88,7 +88,7 @@
 		<key>Comment</key>
 		<string>T.S Eliot</string>
 		<key>Photo</key>
-		<string>11</string>
+		<string>011</string>
 	</dict>
 	<dict>
 		<key>Caption</key>
@@ -96,7 +96,7 @@
 		<key>Comment</key>
 		<string>Aristotle</string>
 		<key>Photo</key>
-		<string>12</string>
+		<string>012</string>
 	</dict>
 </array>
 </plist>

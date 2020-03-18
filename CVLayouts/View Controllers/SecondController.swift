@@ -57,7 +57,7 @@ extension SecondController: UICollectionViewDelegate, UICollectionViewDataSource
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.id, for: indexPath) as! PhotoCell
-            cell.photo = dataSource[indexPath.section][indexPath.item].image
+            cell.photo = albumCovers.randomElement()
             return cell
         }
     }
