@@ -1,5 +1,5 @@
 <h1 align="center">CollectionView Custom Layouts</h1>
-<h3 align="center">and Compositional Layouts</h3>
+<h3 align="center">different useful layouts and compositional layouts</h3>
 <p align="center">no storyboards. 100% programmatically.</p>
 
 <p align="center">
