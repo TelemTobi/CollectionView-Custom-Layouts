@@ -33,18 +33,18 @@ class ThirdConreoller: UIViewController {
         collectionView.dataSource = self
     }
     
-    func shouldBePink(_ number: Int) -> Bool {
+    func themeColor(_ number: Int) -> UIColor {
         if number == 1 {
-            return false
+            return .systemPink
         } else if number == 2  || number == 3 {
-             return true
+            return .systemBlue
         }
         for i in 2...number / 2 {
             if number % i == 0 {
-                return true
+                return .systemBlue
             }
         }
-        return false
+        return .systemPink
     }
 }
 
@@ -56,7 +56,7 @@ extension ThirdConreoller: UICollectionViewDelegate, UICollectionViewDataSource 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumberCell.id, for: indexPath) as! NumberCell
         cell.numberLabel.text = (indexPath.item + 1).description
-        cell.contentView.backgroundColor = shouldBePink(indexPath.item + 1) ? .systemPink : .systemBlue
+        cell.contentView.backgroundColor = themeColor(indexPath.item + 1)
         return cell
     }
     

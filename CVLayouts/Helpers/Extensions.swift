@@ -15,6 +15,7 @@ extension UIView {
         layer.masksToBounds = true
     }
 }
+
 extension UIViewController {
     func setBackgroundImage(_ image: UIImage) {
         let backgroundImage = UIImageView(image: image)
@@ -38,20 +39,5 @@ extension UIViewController {
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
         return collectionView
-    }
-}
-
-extension UIColor {
-    
-    static func random(red: CGFloat = CGFloat.random(in: 0...1),
-                       green: CGFloat = CGFloat.random(in: 0...1), // from 0.5 to 1.0 to stay away from white
-                       blue: CGFloat = CGFloat.random(in: 0...1), // from 0.5 to 1.0 to stay away from black
-                       alpha: CGFloat = 1) -> UIColor {
-        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
-    }
-    
-    static func randomThemeColor() -> UIColor {
-        let themeColors: [UIColor] = [.systemBlue, .systemPink]
-        return themeColors.randomElement()!
     }
 }
