@@ -37,7 +37,6 @@ class FirstLayout {
         let containerGroup = NSCollectionLayoutGroup.vertical(layoutSize: containerGroupSize, subitems: subitems)
         
         let section = NSCollectionLayoutSection(group: containerGroup)
-//        section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
         section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
         
         return section
