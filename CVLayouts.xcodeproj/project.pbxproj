@@ -15,7 +15,6 @@
 		7DA23942241F86A50075428F /* FourthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA23941241F86A50075428F /* FourthController.swift */; };
 		7DA23945241F8E070075428F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA23944241F8E070075428F /* Extensions.swift */; };
 		7DA23947241FB12E0075428F /* FourthLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA23946241FB12E0075428F /* FourthLayout.swift */; };
-		7DA23949241FB1820075428F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA23948241FB1820075428F /* Protocols.swift */; };
 		7DA2394D242002B30075428F /* AnnotatedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2394C242002B30075428F /* AnnotatedPhotoCell.swift */; };
 		7DA239502420072C0075428F /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2394F2420072C0075428F /* Photos.xcassets */; };
 		7DA23952242007E60075428F /* AnnotatedPhotos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DA23951242007E60075428F /* AnnotatedPhotos.plist */; };
@@ -40,7 +39,6 @@
 		7DA23941241F86A50075428F /* FourthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthController.swift; sourceTree = "<group>"; };
 		7DA23944241F8E070075428F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7DA23946241FB12E0075428F /* FourthLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthLayout.swift; sourceTree = "<group>"; };
-		7DA23948241FB1820075428F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		7DA2394C242002B30075428F /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
 		7DA2394F2420072C0075428F /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
 		7DA23951242007E60075428F /* AnnotatedPhotos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AnnotatedPhotos.plist; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				7DA23944241F8E070075428F /* Extensions.swift */,
-				7DA23948241FB1820075428F /* Protocols.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -244,7 +241,6 @@
 				7DE8966E2422868B0083253F /* FirstController.swift in Sources */,
 				7DA23945241F8E070075428F /* Extensions.swift in Sources */,
 				7DA2392A241ED22B0075428F /* SceneDelegate.swift in Sources */,
-				7DA23949241FB1820075428F /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CustomLayoutDelegate {
+    func collectionView(collectionView: UICollectionView, heightForItemAt indexPath: IndexPath) -> CGFloat
+}
+
 class FourthLayout: UICollectionViewLayout {
     
     var delegate: CustomLayoutDelegate?
