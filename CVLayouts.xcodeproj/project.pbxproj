@@ -83,7 +83,6 @@
 				7DA2394E242007030075428F /* Assets */,
 				7DA23943241F8DEE0075428F /* Helpers */,
 				7DA2393B241F857D0075428F /* Layouts */,
-				7DA2393D241F85900075428F /* Views */,
 				7DA2393C241F85840075428F /* View Controllers */,
 				7DA23935241ED22C0075428F /* Info.plist */,
 			);
@@ -98,6 +97,7 @@
 				7DE896652420D0920083253F /* ThirdLayout.swift */,
 				7DE89669242145990083253F /* FourthLayout.swift */,
 				7DA23946241FB12E0075428F /* FifthLayout.swift */,
+				7DA2393D241F85900075428F /* Views */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";

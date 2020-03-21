@@ -64,7 +64,8 @@ class FifthLayout: UICollectionViewLayout {
           contentHeight = max(contentHeight, frame.maxY)
           yOffset[column] = yOffset[column] + height
             
-          column = column < (numberOfColumns - 1) ? (column + 1) : 0
+            column = yOffset.firstIndex(of: yOffset.min()!) ?? 0
+//          column = column < (numberOfColumns - 1) ? (column + 1) : 0
         }
     }
     

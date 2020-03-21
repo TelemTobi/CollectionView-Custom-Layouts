@@ -34,7 +34,7 @@ class ThirdLayout {
             let containerGroup = NSCollectionLayoutGroup.horizontal(layoutSize: containerGroupSize, subitems: subitems)
   
             let section = NSCollectionLayoutSection(group: containerGroup)
-            section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+            section.orthogonalScrollingBehavior = .continuous
             section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
             
             let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(48))

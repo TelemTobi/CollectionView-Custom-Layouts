@@ -62,6 +62,6 @@ extension FifthController: UICollectionViewDelegate, UICollectionViewDataSource 
 
 extension FifthController: CustomLayoutDelegate {
     func collectionView(collectionView: UICollectionView, heightForItemAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat.random(in: 50...250)
+        return CGFloat.random(in: 100...250)
     }
 }
