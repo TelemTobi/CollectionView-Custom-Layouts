@@ -1,5 +1,5 @@
 //
-//  ThirdLayout.swift
+//  SecondLayout.swift
 //  CVLayouts
 //
 //  Created by Telem Tobi on 17/03/2020.
@@ -8,83 +8,42 @@
 
 import UIKit
 
-class ThirdLayout: UICollectionViewLayout {
+class ThirdLayout {
     
-    var delegate: CustomLayoutDelegate?
+    static let shared = ThirdLayout()
+    private init(){}
     
-    private let numberOfColumns = 3
-    private let cellPadding: CGFloat = 6
-    private let cellHeight: CGFloat = 150
-    
-    private var cache = [UICollectionViewLayoutAttributes]()
-    
-    private var contentHeight: CGFloat = 0
-    private var contentWidth: CGFloat {
-      guard let collectionView = collectionView else {
-        return 0
-      }
-      let insets = collectionView.contentInset
-      return collectionView.bounds.width - (insets.left + insets.right)
-    }
-    
-    override var collectionViewContentSize: CGSize {
-        return CGSize(width: contentWidth, height: contentHeight)
-    }
-    
-    override func prepare() {
-        guard cache.isEmpty == true, let collectionView = collectionView else { return }
+    func create() -> UICollectionViewLayout {
         
-        let columnWidth = contentWidth / CGFloat(numberOfColumns)
-        let xOffset: [CGFloat] = [0, columnWidth * 2, columnWidth]
-        var yOffset: [CGFloat] = [2 * cellPadding, 2 * cellPadding, cellPadding + cellHeight]
-        
-        var column = 0
-        
-        for item in 0..<collectionView.numberOfItems(inSection: 0) {
-            let indexPath = IndexPath(item: item, section: 0)
+        let layout = UICollectionViewCompositionalLayout { (section: Int, environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+
+            let leadingItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0)))
+            leadingItem.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+            let leadingGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7), heightDimension: .fractionalHeight(1))
+            let leadingGroup = NSCollectionLayoutGroup.vertical(layoutSize: leadingGroupSize, subitem: leadingItem, count: 1)
             
-            let frame = CGRect(x: xOffset[column], y: yOffset[column], width: columnWidth, height: columnWidth)
-            let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
-                
-            let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
-            attributes.frame = insetFrame
-            cache.append(attributes)
-                
-            contentHeight = max(contentHeight, frame.maxY)
+            let trailingItem =  NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0)))
+            trailingItem.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+            let trailingGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(1))
             
-            let height = cellPadding * 2 + cellHeight
-            yOffset[column] = yOffset[column] + 2 * (height - cellPadding)
-                
-            let numberOfItems = collectionView.numberOfItems(inSection: 0)
-            if indexPath.item == numberOfItems - 1 {
-                switch column {
-                     case 0:
-                       column = 2
-                     case 2:
-                       column = 0
-                     case 1:
-                       column = 2
-                     default:
-                       return
-                }
-            } else {
-                column = column < (numberOfColumns - 1) ? (column + 1) : 0
-            }
+            let trailingGroup =  NSCollectionLayoutGroup.vertical(layoutSize: trailingGroupSize, subitem: trailingItem, count: 2)
+            
+            let containerGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),  heightDimension: .absolute(250))
+            
+            let subitems = (section % 2 > 0) ? [trailingGroup, leadingGroup] : [leadingGroup, trailingGroup]
+            let containerGroup = NSCollectionLayoutGroup.horizontal(layoutSize: containerGroupSize, subitems: subitems)
+  
+            let section = NSCollectionLayoutSection(group: containerGroup)
+            section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+            section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
+            
+            let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(48))
+            let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: "header", alignment: .top)
+            headerElement.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 8, bottom: 5, trailing: 8)
+            section.boundarySupplementaryItems = [headerElement]
+            
+            return section
         }
-    }
-    
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        var visibleLayoutAttributes: [UICollectionViewLayoutAttributes] = []
-        
-        for attributes in cache {
-          if attributes.frame.intersects(rect) {
-            visibleLayoutAttributes.append(attributes)
-          }
-        }
-        return visibleLayoutAttributes
-    }
-    
-    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        return cache[indexPath.item]
+        return layout
     }
 }

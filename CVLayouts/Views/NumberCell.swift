@@ -23,8 +23,6 @@ class NumberCell: UICollectionViewCell {
     }
     
     private func setUpElements() {
-        contentView.layer.cornerRadius = frame.height / 2
-        contentView.layer.masksToBounds = true
         contentView.layer.borderWidth = 2
         contentView.layer.borderColor = UIColor.white.cgColor
         

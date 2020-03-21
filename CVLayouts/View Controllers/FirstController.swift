@@ -32,7 +32,7 @@ class FirstController: UIViewController {
         let layout = FirstLayout.shared.create()
         collectionView = prepareCollectionView(layout: layout)
         
-        collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.id)
+        collectionView.register(NumberCell.self, forCellWithReuseIdentifier: NumberCell.id)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -44,8 +44,9 @@ extension FirstController: UICollectionViewDelegate, UICollectionViewDataSource 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.id, for: indexPath) as! PhotoCell
-        cell.photo = albumCovers[indexPath.item % albumCovers.count]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumberCell.id, for: indexPath) as! NumberCell
+        cell.numberLabel.text = (indexPath.item + 1).description
+        cell.contentView.backgroundColor = (indexPath.item + 1) == 9 || (indexPath.item + 1) % 12 == 9 ? .systemBlue : .systemPink
         return cell
     }
     

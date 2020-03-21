@@ -31,14 +31,17 @@ class TabBarController: UITabBarController {
         firstVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "1.square"), selectedImage: UIImage(systemName: "1.square.fill"))
         
         let secondVC = SecondController()
-        secondVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "2.square"), selectedImage: UIImage(systemName: "2.square.fill"))
+        secondVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "2.square"), selectedImage: UIImage(systemName: "3.square.fill"))
         
-        let thirdVC = ThirdConreoller()
+        let thirdVC = ThirdController()
         thirdVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "3.square"), selectedImage: UIImage(systemName: "3.square.fill"))
         
-        let fouthVC = FourthController()
-        fouthVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "4.square"), selectedImage: UIImage(systemName: "4.square.fill"))
+        let fourthVC = FourthController()
+        fourthVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "4.square"), selectedImage: UIImage(systemName: "4.square.fill"))
         
-        self.viewControllers = [firstVC, secondVC, thirdVC, fouthVC]
+        let fifthVC = FifthController()
+        fifthVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "5.square"), selectedImage: UIImage(systemName: "5.square.fill"))
+        
+        self.viewControllers = [firstVC, secondVC, thirdVC, fourthVC, fifthVC]
     }
 }

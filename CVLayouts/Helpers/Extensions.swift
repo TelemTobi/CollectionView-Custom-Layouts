@@ -11,7 +11,7 @@ import UIKit
 
 extension UIView {
     func round(radius: CGFloat? = nil) {
-        layer.cornerRadius = radius ?? frame.height / 2
+        layer.cornerRadius = radius ?? frame.width / 2
         layer.masksToBounds = true
     }
 }
