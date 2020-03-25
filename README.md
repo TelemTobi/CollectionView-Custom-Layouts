@@ -5,7 +5,7 @@
 <p align="center">
   <img src="/GIFs/gif1.gif" alt="custom layout gif">
   <img src="/GIFs/gif2.gif" alt="custom layout gif">
-  <img src="/GIFs/gif3.gif" alt="custom layout gif">
+  <img src="/GIFs/gif3.gif" alt="custom layout gif"><br/>
   <img src="/GIFs/gif4.gif" alt="custom layout gif">
   <img src="/GIFs/gif5.gif" alt="custom layout gif">
 </p>
