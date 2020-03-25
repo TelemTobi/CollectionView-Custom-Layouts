@@ -35,6 +35,7 @@ class SecondLayout {
         
         let layoutSection = NSCollectionLayoutSection(group: containerGroup)
         layoutSection.orthogonalScrollingBehavior = section == 0 ? .continuous : .none
+//        layoutSection.orthogonalScrollingBehavior = .continuous
         layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
         
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(48))

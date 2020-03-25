@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7DA23924241ED22B0075428F /* CVLayouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVLayouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DA23924241ED22B0075428F /* Layouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Layouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA23927241ED22B0075428F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DA23929241ED22B0075428F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7DA2392B241ED22B0075428F /* ThirdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdController.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		7DA23925241ED22B0075428F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7DA23924241ED22B0075428F /* CVLayouts.app */,
+				7DA23924241ED22B0075428F /* Layouts.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 			);
 			name = CVLayouts;
 			productName = CVLayouts;
-			productReference = 7DA23924241ED22B0075428F /* CVLayouts.app */;
+			productReference = 7DA23924241ED22B0075428F /* Layouts.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -357,7 +357,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Tobi.CVLayouts;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Layouts;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -375,7 +375,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Tobi.CVLayouts;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Layouts;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
